@@ -1,0 +1,60 @@
+// Variables
+$main-font: 'Muli', sans-serif
+$other-font: 'Lora', serif
+
+body
+  font-family: $main-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+
+.text-muted
+  color: $color-muted !important
+  opacity: .75 !important
+
+.text-strong
+  font-weight: 700
+
+.text-colored
+  color: $main-color !important
+
+.text-underlined
+  text-decoration: underline
+
+.other-font
+  font-family: $other-font
+
+.vertical-text
+  transform: rotate(270deg)
+  right: -60px
+  top: 135px
+  &::after
+    content: ''
+    width: 100px
+    height: 1px
+    background: $color-muted
+    display: inline-block
+    margin-left: 1.125em
+    margin-right: 1.125em
+
+// Sizes
+h1, .h1
+  font-size: 1.75em
+h2
+  font-size: 1.25em
+h3
+  font-size: 1em
+@media (min-width: $md)
+  h1, .h1
+    font-size: 2em
+  h2
+    font-size: 1.5em
+  h3
+    font-size: 1.15em
+@media (min-width: $lg)
+  h1, .h1
+    font-size: 3.25em
+  h2
+    font-size: 2.25em
+  h3
+    font-size: 1.25em

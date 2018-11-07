@@ -1,0 +1,54 @@
+// Cursor on hover
+.designer
+  cursor: url('https://source.unsplash.com/o2TRWThve_I/120x70'), auto
+.developer
+  cursor: url('https://source.unsplash.com/OqtafYT5kTw/120x70'), auto
+a
+  transition: all .35s ease
+a:hover
+  text-decoration: none !important
+  color: $main-color !important
+  transition: all .35s ease
+
+.h-100vh
+  height: 65vh
+  min-height: 300px
+.responsive-padding
+  padding-bottom: 4em
+
+.bg-image
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.portfolio-item:nth-child(2)
+  margin-top: 2.5em
+.portfolio-item:nth-child(3)
+  margin-top: 5em
+.portfolio-item:last-child
+  display: none
+
+.portfolio-img
+  height: 50vw
+
+
+@media (min-width: $md)
+  .h-100vh
+    height: 70vh
+  .responsive-padding
+    padding-bottom: 6em
+  .portfolio-item:last-child
+    display: block
+  .portfolio-img
+    height: 33.333vw
+
+@media (min-width: $lg)
+  .h-100vh
+    height: 80vh
+  .responsive-padding
+    padding-bottom: 10em
+  .portfolio-img
+    transition: all .35s ease
+    &:hover
+      filter: invert(100%)
+      transition: all .35s ease

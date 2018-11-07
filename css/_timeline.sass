@@ -1,0 +1,75 @@
+// Sticky on large devices
+@media (min-width: $lg)
+  .exp-ed
+    .title
+      position: -webkit-sticky
+      position: sticky
+      top: 1em
+
+// Color Code
+.color
+  width: 12px
+  height: 12px
+  border-radius: 50%
+  display: inline-block
+  margin-right: 1em
+.experience .color
+  background: $main-color
+.education .color
+  background: #fff
+
+// Timeline
+.timeline
+  padding-left: 4.5em
+  ul
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 0
+      border: 2px dashed #1c1c1c
+    li
+      margin: 50px 40px
+      position: relative
+      .line
+        content: ''
+        position: absolute
+        top: 0
+        left: -40px
+        height: 100%
+        width: 0
+        border: 2px solid #323232
+        &:before, &:after
+          content: ''
+          width: 10px
+          height: 10px
+          border: 2px solid $main-color
+          position: absolute
+          border-radius: 50%
+          left: -5px
+        &:before
+          top: -10px
+        &::after
+          top: 100%
+      .time
+        span
+          position: absolute
+          font-size: .85em
+          left: -90px
+          width: 30px
+          text-align: right
+          &:first-child
+            top: -15px
+          &:last-child
+            top: 91%
+
+// Opacity transition
+.timeline-item
+  opacity: .15
+  transition: all .35s ease
+.opacity-reveal
+  opacity: 1
+  transition: all .35s ease
